@@ -1,4 +1,4 @@
-# Portfolio Summary Sheets
+# Chemistry Cheat Sheets
 
 The summary sheets summarize majority of the concepts covered in the SCH3U0 course. These sheets can be useful for students studying chemistry in their senior years of high school, as many new concepts will be built on the ones that are summarized in the sheets. Each of the summary sheets are double-sided to provide all the information you need in a compressed amount of space. Since the topics are not too advanced, they are all relatively well covered, given the constraints of the layout. The main purpose of these summary sheets is for students to use them as a reference guide, when reviewing or studying for their following years of chemistry to come.
 
