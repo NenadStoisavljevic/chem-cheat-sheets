@@ -1,0 +1,290 @@
+\documentclass{article}
+\usepackage[landscape]{geometry}
+\usepackage{url}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{esint}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage[symbol]{footmisc}
+\usepackage{booktabs}
+\makeatletter
+
+\newcommand*\bigcdot{\mathpalette\bigcdot@{.5}}
+\newcommand*\bigcdot@[2]{\mathbin{\vcenter{\hbox{\scalebox{#2}{$\m@th#1\bullet$}}}}}
+\renewcommand{\thempfootnote}{\fnsymbol{mpfootnote}}
+\makeatother
+
+\title{Unit 4 - Chemical Equilibrium}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\advance\topmargin-.8in
+\advance\textheight3in
+\advance\textwidth3in
+\advance\oddsidemargin-1.5in
+\advance\evensidemargin-1.5in
+\parindent0pt
+\parskip2pt
+\newcommand{\hr}{\centerline{\rule{3.5in}{1pt}}}
+%\colorbox[HTML]{e4e4e4}{\makebox[\textwidth-2\fboxsep][l]{texto}
+\begin{document}
+
+\begin{center}{\huge{\textbf{Unit 4 - Chemical Equilibrium}}}\\
+\end{center}
+\begin{multicols*}{3}
+
+\tikzstyle{mybox} = [draw=black, fill=white, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=10pt]
+\tikzstyle{fancytitle} =[fill=black, text=white, font=\bfseries]
+
+%------------ Dynamic Equilibrium ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    \textbf{Dynamic Equilibrium}: a chemical system at equilibrium that is changing at the molecular level, while its macroscopic properties remain constant. \\
+    \textbf{Chemical Equilibrium}: a state in a chemical system in which the forward reaction and the reverse reaction are occurring at the same rate. \\
+    \textbf{Reversible Reaction}: a chemical reaction that proceeds in both the forward and reverse directions. \\
+    \textbf{Homogeneous Equilibrium}: a chemical system in equilibrium in which all of the components are in the same physical state. \\
+    e.g. \ce{N2(g) + 3H2(g) <=> 2NH3(g)} \\
+    \textbf{Heterogeneous Equilibrium}: a chemical system in equilibrium in which the components are in different physical states. \\
+    e.g. \ce{CaCO3(s) <=> CaO(s) + CO2(g)}
+    \end{minipage}
+};
+%------------ Dynamic Equilibrium Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Dynamic Equilibrium};
+\end{tikzpicture}
+
+%------------ Le Châtelier's Principle ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    \textbf{Le Châtelier's Principle}: a principle stating that if a chemical system in a state of equilibrium is disturbed, the system will undergo a change that shifts its equilibrium position in a direction that reduces the effect of the disturbance. \\
+    The effects of concentration changes:
+    \begin{itemize}
+        \item Increasing the concentration of a product causes a shift to reactant formation.
+        \item Decreasing the concentration of a product causes a shift to product formation.
+        \item Increasing the concentration of a reactant causes a shift to product formation.
+        \item Decreasing the concentration of a reactant causes a shift to reactant formation.
+	\item $K\textsubscript{eq}$ is not affected by changes in the product or reaction concentrations, because the ratio of products to reactants is the same.
+    \end{itemize}
+    e.g. your body controls the concentration of carbonic acid in your blood by removing carbon dioxide when you exhale, causing a shift in the reaction rates. \\
+    \ce{H2CO3(aq) <=> CO2(aq) + H2O(l)}
+    \end{minipage}
+};
+%------------ Le Châtelier's Principle Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Le Châtelier's Principle};
+\end{tikzpicture}
+
+%------------ Le Châtelier's Principle Continued ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    The effects of temperature changes:
+    \begin{itemize}
+        \item A temperature increase (addition of thermal energy) favours the endothermic (heat-absorbing) reaction, whereas a temperature decrease (removal of thermal energy) favours the exothermic (heat-releasing) reaction.
+        \item In an endothermic system, an increase in temperature increases $K\textsubscript{eq}$.
+        \item In an exothermic system, an increase in temperature decreases $K\textsubscript{eq}$.
+    \end{itemize}
+    e.g. the decomposition of \ce{N2O4(g)}, is endothermic. If this chemical system is heated, the energy in the system increases. There is more energy available for the forward reaction to occur. \\
+    \ce{$\underset{\text{colourless}}{\ce{N2O4(g) + 58.0 kJ/mol}}$ <=> $\underset{\text{brown}}{\ce{2NO2(g)}}$} \\
+    The effects of pressure or volume changes:
+    \begin{itemize}
+        \item If pressure increases (and therefore volume decreases), the reaction shifts so that the total number of particles decreases, which decreases the pressure in the system.
+        \item If pressure decreases (and therefore volume increases), the reaction shifts so that the total number of particles increases, which increases the pressure in the system.
+        \item An inert gas added to a chemical system at equilibrium does not cause a shift in either direction in a reversible reaction.
+	\item $K\textsubscript{eq}$ is not affected by a change in pressure or volume because the ratio of products to reactants is the same.
+    \end{itemize}
+    e.g. instant coffee is an example of food that can be preserved by freeze-drying (removing moisture helps preserve it), a process that uses a shift in equilibrium. \\
+    \ce{H2O(s) <=> H2O(g)} \\
+    $\star$ Adding a catalyst causes a system to reach equilibrium more quickly, but it does not shift the equilibrium in either direction.
+    \end{minipage}
+};
+%------------ Le Châtelier's Principle Continued Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Le Châtelier's Principle Continued};
+\end{tikzpicture}
+
+%------------ Equilibrium Law ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    \textbf{Law of Chemical Equilibrium} or \textbf{Law of Mass Action}: in a chemical system at equilibrium, there is a constant ratio between the concentrations of the products and the concentrations of the reactants. \\
+    \textbf{The Equilibrium Constant Expression} \\
+    For a general equilibrium reaction: \\
+    \ce{aA + bB <=> cC + dD} \\ \\
+    $\displaystyle{K\textsubscript{eq}=\frac{[C]^{c}[D]^{d}}{[A]^{a}[B]^{b}}}$ or $\displaystyle{K\textsubscript{eq}=\frac{[\text{products}]}{[\text{reactants}]}}$
+    \begin{itemize}
+        \item {[A]}, {[B]}, {[C]}, and {[D]} represent the concentrations of the reactants and products after the reaction has reached equilibrium and the concentrations are no longer changing.
+	\item The exponents a, b, c, and d, are the stoichiometric coefficients from the balanced chemical equation at equilibrium.
+    \end{itemize}
+    \end{minipage}
+};
+%------------ Equilibrium Law Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Equilibrium Law};
+\end{tikzpicture}
+
+%------------ Equilibrium Constant ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    \textbf{Equilibrium Constant, $K\textsubscript{eq}$}: the ratio of equilibrium concentrations for a particular chemical system at a particular temperature. \\
+     $\rightarrow$ A \textbf{reaction quotient}, $Q\textsubscript{eq}$ or $Q\textsubscript{p}$, has the same formula as $K\textsubscript{eq}$ or $K\textsubscript{p}$, but the chemical system may or may not be at equilibrium. \\
+    Three possible situations that occur when using the reaction quotient:
+    \begin{itemize}
+        \item If $Q\textsubscript{eq} < K\textsubscript{eq}$ (or $Q\textsubscript{p} < K\textsubscript{p}$), the ratio of products to reactants is less than $K\textsubscript{eq}$. To reach equilibrium, more products must form and reactants must be consumed. The reaction shifts to the right (toward product formation) to reach equilibrium.
+	\item If $Q\textsubscript{eq} = K\textsubscript{eq}$ (or $Q\textsubscript{p} = K\textsubscript{p}$), the system is at equilibrium.
+	\item If $Q\textsubscript{eq} > K\textsubscript{eq}$ (or $Q\textsubscript{p} > K\textsubscript{p}$), the ratio of products to reactants is greater than $K\textsubscript{eq}$. Products must decompose into reactants to reach equilibrium. The reaction shifts to the left (toward reactant formation) to reach equilibrium.
+    \end{itemize}
+    \end{minipage}
+};
+%------------ Equilibrium Constant Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Equilibrium Constant};
+\end{tikzpicture}
+
+%------------ Solubility Product ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    \textbf{Common-Ion Effect}: the shift in equilibrium position caused by the addition of a compound that has an ion in common with one of the dissolved substances. \\
+    \textbf{Solubility-Product Constant, $K\textsubscript{sp}$}: an equilibrium constant for slightly soluble ionic compounds.
+    \begin{itemize}
+        \item If $Q\textsubscript{sp} < K\textsubscript{sp}$, the solution is unsaturated and no precipitate forms.
+        \item If $Q\textsubscript{sp} = K\textsubscript{sp}$, the solution is saturated and no change occurs.
+        \item If $Q\textsubscript{sp} > K\textsubscript{sp}$, a precipitate forms until the solution is saturated.
+    \end{itemize}
+    \end{minipage}
+};
+%------------ Solubility Product Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Solubility Product};
+\end{tikzpicture}
+
+%------------ Acid-Base Equilibrium ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    \textbf{Dissociation}: the process of breaking apart into smaller particles, such as ions or neutral particles. \\
+    \textbf{Hydronium Ion, \ce{H3O+}}: a proton bonded to a water molecule by a covalent bond. \\
+    \textbf{Hydroxide Ion, \ce{OH-}}: a negatively charged ion composed of a hydrogen atom and an oxygen atom. \\
+    \textbf{Limitations of the Arrhenius Theory}:
+    \begin{itemize}
+        \item Some substances do not have \ce{OH} in their chemical formulas, but nevertheless they yield hydroxide ions when they react with water.
+	\item Only applies to aqueous solutions.
+	\item States that hydrogen ions will dissociate and float freely in water.
+	\item Different acids create different pH, even when they have the same concentration.
+    \end{itemize}
+    e.g. \ce{NH3(aq) + H2O(l) <=> NH4^{+1}(aq) + OH^{-1}(aq)} \\
+    \textbf{Brønsted-Lowry Theory of Acids and Bases}:
+    \begin{itemize}
+        \item A Brønsted-Lowry acid is a \textit{proton donor} or any substance that donates a hydrogen ion. An acid must contain hydrogen in its formula. All Arrhenius acids are also Brønsted-Lowry acids.
+	\item A Brønsted-Lowry base is a \textit{proton acceptor} or any substance that accepts a hydrogen ion. A base must have a lone pair of electrons to bind with the hydrogen ion. All Arrhenius bases are also Brønsted-Lowry bases.
+    \end{itemize}
+    \end{minipage}
+};
+%------------ Acid-Base Equilibrium Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Acid-Base Equilibrium};
+\end{tikzpicture}
+
+%------------ Acid-Base Equilibrium Continued ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    $\rightarrow$ According to the Brønsted-Lowry definition, acids and bases do not need to be in aqueous solution and their activity in water is not part of the definition. \\
+    $\rightarrow$ In general, an acid-base equilibrium reaction shifts in the direction in which a stronger acid and a stronger base form a weaker acid and a weaker base. \\
+    $\rightarrow$ Any substance that behaves as an acid can do so only if another substance behaves as a base at the same time. \\
+    \textbf{Conjugate Acid-Base Pair}: two substances that are related by the gain or loss of a proton; the acid of an acid-base pair has one more proton than its conjugate base. \\
+    \textbf{Conjugate Base}: the particle that is produced when an acid donates a hydrogen ion to a base. \\
+    \textbf{Conjugate Acid}: the particle that is produced when a base accepts a hydrogen ion from an acid. \\
+    \textbf{Amphoteric Substance}: a molecule or ion that can act as an acid or base. \\
+    e.g. water can act as an acid or as a base. \\
+    \ce{$\underset{\text{acid}}{\ce{HCl(aq)}}$ + $\underset{\text{base}}{\ce{H2O(l)}}$ -> $\underset{\text{conjugate base}}{\ce{Cl-(aq)}}$ + $\underset{\text{conjugate acid}}{\ce{H3O+(aq)}}$} \\
+    \ce{$\underset{\text{base}}{\ce{NH3(aq)}}$ + $\underset{\text{acid}}{\ce{H2O(l)}}$ -> $\underset{\text{conjugate acid}}{\ce{NH4+(aq)}}$ + $\underset{\text{conjugate base}}{\ce{OH-(aq)}}$} \\
+    \textbf{Ion-Product Constant of Water, $K\textsubscript{w}$}: the equilibrium constant for the autoionization of water. \\
+    $\star$ For a reaction that is the sum of two or more reactions, the overall equilibrium constant is the product of the individual equilibrium constants. $K\textsubscript{a}K\textsubscript{b}=K\textsubscript{w}$
+    \end{minipage}
+};
+%------------ Acid-Base Equilibrium Continued Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Acid-Base Equilibrium Continued};
+\end{tikzpicture}
+
+%------------ pH and pOH ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    \textbf{pH}: the negative common logarithm of the concentration of the hydronium ion, \ce{H3O+}. \\
+    $\text{pH}=-\log\ce{[H3O+]}$ and $\ce{[H3O+]}=10^{-\text{pH}}$ \\
+    $\rightarrow$ Sometimes, \ce{H3O+(aq)} is simplified to \ce{H+(aq)}. \\
+    \textbf{pOH}: the negative common logarithm of the concentration of the hydroxide ion, \ce{OH-}. \\
+    $\text{pOH}=-\log\ce{[OH^-]}$ and $\ce{[OH^-]}=10^{-\text{pOH}}$ \\
+    $\rightarrow$ A high pH number corresponds to a low concentration of the hydronium ion or a basic solution. \\
+    $\rightarrow$ A low pH number corresponds to a high concentration of the hydronium ion or an acidic solution. \\
+    $K\textsubscript{w}=\ce{[H3O+]}\ce{[OH^-]}=1.0\times10^{-14}$ (at 25$^{\circ}$C) \\
+    $\text{p}K\textsubscript{w}=\text{pH}+\text{pOH}=14.00$ (at 25$^{\circ}$C) \\
+    $\therefore$ The sum of pH and pOH is 14.00 for any aqueous solution at 25$^{\circ}$C.
+    \end{minipage}
+};
+%------------ pH and pOH Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {pH and pOH};
+\end{tikzpicture}
+
+%------------ Solving Equilibrium Concentrations ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    \textbf{I}nitial, \textbf{C}hange, \textbf{E}quilibrium (ICE) table, e.g.
+    \begin{center}
+    \begin{tabular}{cc@{}c@{}c@{}c@{}c}
+    \toprule
+    & \ce{[H2(g)]} & ${}+{}$ & \ce{[I2(g)]} & \ce{<=>} & \ce{[HI(g)]} \\
+    \midrule
+    I & 2.00 && 1.00 && 0 \\
+    C & $-x$ && $-x$ && $+2x$ \\
+    E & $2.00-x$ && $1.00-x$ && $2x$ \\
+    \bottomrule
+    \end{tabular}
+    \end{center}
+    \underline{Case 1} \\
+    Use the $K$ value, reaction quotient and equilibrium law, an ICE chart, and take square root of both sides. \\
+    \underline{Case 2} \\
+    Check assumption by calculating if $\displaystyle{\frac{[C]_{i}}{K}>>100}$. \\
+    Check if $\displaystyle{\frac{\Delta}{[C]_{i}}}$ is less than 5\% to verify assumption. \\
+    \underline{Case 3} \\
+    If the equation cannot be rooted and the assumption is not valid, then the quadratic formula must be used.
+    \end{minipage}
+};
+%------------ Solving Equilibrium Concentrations Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Solving Equilibrium Concentrations};
+\end{tikzpicture}
+
+%------------ Acid-Base Strength ---------------
+\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{0.3\textwidth}
+    \textbf{Strong Acid}: an acid that dissociates completely into ions in water. The 6 strong acids are: \ce{HCl(aq)}, \ce{HBr(aq)}, \ce{HI(aq)}, \ce{HClO4(aq)}, \ce{HNO3(aq)}, \ce{H2SO4(aq)} \\
+    \textbf{Weak Acid}: an acid that ionizes to a limited extent in water. e.g. \ce{NH4+(aq)}, \ce{H2S(aq)}, \ce{H3PO4(aq)} \\
+    \textbf{Strong Base}: A base that ionizes completely in water. Some common strong bases are: \ce{LiOH(aq)}, \ce{NaOH(aq)}, \ce{KOH(aq)}, \ce{Ca(OH)2(aq)}, \ce{Ba(OH)2(aq)} \\
+    \textbf{Weak Base}: A base that ionizes to a limited extent in water. e.g. \ce{NH3(aq)}, \ce{PO4^{3-}(aq)}, \ce{OCl-(aq)} \\
+    $\rightarrow$ An acid or base is considered strong if $K\textsubscript{a} > 1$. \\
+    $\rightarrow$ An acid or base is considered weak if $K\textsubscript{a} < 1$. \\
+    \textbf{Acid-Dissociation Constant} or \textbf{Acid-Ionization Constant, $K\textsubscript{a}$}: an equilibrium constant for the dissociation of an acid into ions or for the ionization of an acid.
+    \begin{center}\ce{stronger acid -> higher [H3O+] -> larger $K\textsubscript{a}$ value}\end{center}
+    \textbf{Base-Dissociation Constant} or \textbf{Base-Ionization Constant, $K\textsubscript{b}$}: an equilibrium constant for the ionization of a base. \\
+    Consider the reaction of acetic acid, \ce{CH3COOH(aq)}: \\ \\
+    $\displaystyle{K\textsubscript{a}=\frac{\ce{[H3O^+]}\ce{[CH3COO^-]}}{\ce{[CH3COOH]}}}$ $\displaystyle{K\textsubscript{b}=\frac{\ce{[CH3COOH]}\ce{[OH^-]}}{\ce{[CH3COO^-]}}}$
+    \end{minipage}
+};
+%------------ Acid-Base Strength Header ---------------------
+\node[fancytitle, right=10pt] at (box.north west) {Acid-Base Strength};
+\end{tikzpicture}
+
+\end{multicols*}
+\end{document}
